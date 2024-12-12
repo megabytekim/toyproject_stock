@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Stock Picker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="christmas-scene">
+            <img src="{{ url_for('static', filename='images/christmas_tree.jpg') }}" alt="Christmas Tree" class="tree">
+            <div class="gift-box" id="giftBox">
+                <img src="{{ url_for('static', filename='images/gift_box.png') }}" alt="Gift Box">
+            </div>
+        </div>
+        
+        <div class="result" id="result" style="display: none;">
+            <h2 id="stockName"></h2>
+            <img id="stockImage" alt="Stock Image">
+            <p id="message"></p>
+            <a id="searchLink" target="_blank" style="display: none;">View Stock Details</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

@@ -1,0 +1,13 @@
+[Unit]
+Description=Christmas Stock Picker Flask App
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/christmas_stock_picker
+Environment="PATH=/home/ubuntu/christmas_stock_picker/venv/bin"
+ExecStart=/home/ubuntu/christmas_stock_picker/venv/bin/gunicorn --config gunicorn_config.py wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
