@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8080
 
 # Run gunicorn
-CMD ["gunicorn", "--config", "gunicorn_config.py", "wsgi:app"] 
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"] 
