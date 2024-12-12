@@ -7,6 +7,4 @@ services:
       - "8080:8080"
     volumes:
       - ./static:/app/static
-    environment:
-      - SECRET_KEY=your-secret-key-here
     restart: always 
